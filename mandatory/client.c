@@ -12,7 +12,7 @@
 
 #include "minitalk.h"
 
-int char_to_bits(char c, int pid)
+void char_to_bits(char c, int pid)
 {
 	int	bits;
 

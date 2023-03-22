@@ -19,7 +19,7 @@
 # include <signal.h>
 # include "../libft/libft.h"
 
-int sig_handler(int signum);
-int char_to_bits(char c, int pid);
+void    sig_handler(int signum);
+void    char_to_bits(char c, int pid);
 
 #endif

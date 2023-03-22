@@ -12,7 +12,7 @@
 
 #include "minitalk.h"
 
-int sig_handler(int signum)
+void sig_handler(int signum)
 {
 	static int	bits;
 	static char c;
