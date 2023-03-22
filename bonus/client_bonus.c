@@ -28,6 +28,8 @@ void char_to_bits(char c, int pid)
 	}
 }
 
+
+
 int	main(int argc, char *argv[])
 {
 	int	i;
@@ -38,8 +40,6 @@ int	main(int argc, char *argv[])
 		ft_printf("%s\n", "You just need 2 arguments!");
 		return (0);
 	}
-	if (sigaction(SIGUSR1, &fds, NULL) == -1)
-		ft_printf("Error");	
 	while (argv[2][i] != '\0')
 	{
 		char_to_bits(argv[2][i], ft_atoi(argv[1]));

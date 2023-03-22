@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = minitalk.a
+NAME = minitalk
 COMPILER = cc
 CFLAGS = -Wall -Wextra -Werror
 LIBFTDIREC = libft/libft.a

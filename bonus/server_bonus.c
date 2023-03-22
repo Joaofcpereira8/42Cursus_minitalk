@@ -33,6 +33,7 @@ int	main(int argc, char **argv)
 	(void) argv;
 	struct sigaction fds;
 	fds.sa_handler = &sig_handler;
+	fds.sa_flags = SA_SIGINFO;
 
 	if (argc != 1)
 	{
