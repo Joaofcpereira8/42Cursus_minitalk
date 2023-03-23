@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   server.c                                           :+:      :+:    :+:   */
+/*   server_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jofilipe <jofilipe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 16:50:28 by jofilipe          #+#    #+#             */
-/*   Updated: 2023/03/21 19:15:09 by jofilipe         ###   ########.fr       */
+/*   Updated: 2023/03/23 17:15:34 by jofilipe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void sig_handler(int signum)
 	static char c;
 
 	if (signum == SIGUSR1)
-		c |= (0b1 << bits);	
+		c |= (0b1 << bits);
 	bits++;
 	if (bits == 8)
 	{
@@ -34,6 +34,7 @@ int	main(int argc, char **argv)
 	struct sigaction fds;
 	fds.sa_handler = &sig_handler;
 	fds.sa_flags = SA_SIGINFO;
+	sigemptyset(&fds.sa_mask);
 
 	if (argc != 1)
 	{

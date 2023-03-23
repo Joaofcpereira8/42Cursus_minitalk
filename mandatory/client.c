@@ -6,7 +6,7 @@
 /*   By: jofilipe <jofilipe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 16:50:23 by jofilipe          #+#    #+#             */
-/*   Updated: 2023/03/21 19:15:10 by jofilipe         ###   ########.fr       */
+/*   Updated: 2023/03/22 15:06:01 by jofilipe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,6 @@ int	main(int argc, char *argv[])
 		ft_printf("%s\n", "You just need 2 arguments!");
 		return (0);
 	}
-	if (sigaction(SIGUSR1, &fds, NULL) == -1)
-		ft_printf("Error");	
 	while (argv[2][i] != '\0')
 	{
 		char_to_bits(argv[2][i], ft_atoi(argv[1]));

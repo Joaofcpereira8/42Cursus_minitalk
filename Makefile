@@ -6,7 +6,7 @@
 #    By: jofilipe <jofilipe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/23 15:03:56 by jofilipe          #+#    #+#              #
-#    Updated: 2023/03/16 11:01:30 by jofilipe         ###   ########.fr        #
+#    Updated: 2023/03/22 15:12:31 by jofilipe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,7 @@ clean:
 
 fclean: clean
 	make fclean -C libft
-	rm -f $(NAME)
+	rm -f $(CLIENT)
+	rm -f $(SERVER)
 
 re: fclean all

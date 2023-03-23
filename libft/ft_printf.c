@@ -59,5 +59,3 @@ int	ft_printf(const char *str, ...)
 	va_end(var);
 	return (count);
 }
-
-
