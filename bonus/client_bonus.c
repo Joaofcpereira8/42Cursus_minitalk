@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   client.c                                           :+:      :+:    :+:   */
+/*   client_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jofilipe <jofilipe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 16:50:23 by jofilipe          #+#    #+#             */
-/*   Updated: 2023/03/21 19:15:10 by jofilipe         ###   ########.fr       */
+/*   Updated: 2023/03/24 11:24:15 by jofilipe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-void char_to_bits(char c, int pid)
+void	char_to_bits(char c, int pid)
 {
 	int	bits;
 
@@ -28,7 +28,13 @@ void char_to_bits(char c, int pid)
 	}
 }
 
+//print message "message received" when all message is sent to the other terminal
 
+void	message_received(int signum)
+{
+	(void) signum;
+	ft_printf("Message received!\n");
+}
 
 int	main(int argc, char *argv[])
 {
@@ -45,4 +51,5 @@ int	main(int argc, char *argv[])
 		char_to_bits(argv[2][i], ft_atoi(argv[1]));
 		i++;
 	}
+	signal(SIGUSR1, &message_received);
 }

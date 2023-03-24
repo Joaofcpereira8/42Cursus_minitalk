@@ -6,7 +6,7 @@
 /*   By: jofilipe <jofilipe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 16:50:28 by jofilipe          #+#    #+#             */
-/*   Updated: 2023/03/22 15:22:35 by jofilipe         ###   ########.fr       */
+/*   Updated: 2023/03/24 11:06:33 by jofilipe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ void	sig_handler(int signum)
 int	main(int argc, char **argv)
 {
 	(void) argv;
-	struct sigaction fds;
 
 	if (argc != 1)
 	{
@@ -39,9 +38,8 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	printf ("PID is %d\n",getpid());
-	fds.sa_handler = &sig_handler;
-	sigaction (SIGUSR1, &fds, NULL);
-	sigaction (SIGUSR2, &fds, NULL);
+	signal(SIGUSR1, &sig_handler);
+	signal(SIGUSR2, &sig_handler);
 	while(1)
 		pause();
 	return (0);
