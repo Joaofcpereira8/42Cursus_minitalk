@@ -37,7 +37,7 @@ int	main(int argc, char **argv)
 		ft_printf("%s\n", "There's more arguments then you need!");
 		return (0);
 	}
-	printf ("PID is %d\n",getpid());
+	ft_printf ("PID is %d\n",getpid());
 	signal(SIGUSR1, &sig_handler);
 	signal(SIGUSR2, &sig_handler);
 	while(1)
