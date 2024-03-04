@@ -7,9 +7,9 @@ Description:
 Key Achievements:
 
 - Implemented a client-server architecture for message exchange using signals.
-- 
+  
 - Designed a custom communication protocol to ensure reliable data transmission.
-- 
+  
 - Utilized Unix signals for interprocess communication, demonstrating expertise in system-level programming.
 
 Technologies:
